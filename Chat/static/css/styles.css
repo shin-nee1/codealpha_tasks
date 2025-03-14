@@ -1,0 +1,98 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 400px;
+    height: 500px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #0078FF;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Chat Body */
+#chat-container {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat Bubbles */
+.user-message, .bot-message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #0078FF;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #E5E5EA;
+    color: black;
+    align-self: flex-start;
+}
+
+/* Chat Input Box */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background: white;
+}
+
+#message {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+#send-btn {
+    background-color: #0078FF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+

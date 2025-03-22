@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman Game - Software Engineering Edition</h1>
+
+        <div class="selection">
+            <p>Choose how you want to play:</p>
+            <label>
+                <input type="radio" name="mode" value="default" onclick="toggleCustomInput()"> Use Default Words
+            </label>
+            <label>
+                <input type="radio" name="mode" value="custom" onclick="toggleCustomInput()"> Enter Custom Word
+            </label>
+        </div>
+
+        <div id="custom-input" class="hidden">
+            <input type="text" id="custom-word" placeholder="Enter a word">
+            <input type="text" id="custom-hint" placeholder="Enter a hint">
+        </div>
+
+        <button id="start-btn" onclick="startGame()" disabled>Start Game</button>
+
+        <div id="game-area" class="hidden">
+            <canvas id="hangmanCanvas"></canvas>
+            <div class="word-container" id="word-container"></div>
+            <p id="hint"></p>
+            <div class="input-container">
+                <input type="text" id="guess" maxlength="1" placeholder="Enter a letter">
+                <button onclick="guessLetter()">Guess</button>
+            </div>
+            <p>Wrong Attempts: <span id="wrong-attempts">0</span> / 6</p>
+            <p id="message"></p>
+            <button onclick="resetGame()">Restart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
